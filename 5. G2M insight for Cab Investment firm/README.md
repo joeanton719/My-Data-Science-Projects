@@ -12,7 +12,7 @@ The outcome of your delivery will be a presentation to XYZ’s Executive team. T
 
 ### Data Set:
 
-You have been provided 4 individual data sets. Time period of data is from 31/01/2016 to 31/12/2018.
+You have been provided 4 individual data sets. Time period of data is from 02/01/2016 to 31/12/2018.
 
 Below are the list of datasets which are provided for the analysis:
 
