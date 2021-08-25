@@ -3,9 +3,15 @@ import numpy as np
 import pandas as pd
 import pickle
 
-st.title("Let's Predict Used Car Prices!!!")
+st.title("Let's Predict Used Car Prices!")
 
-df = pd.read_csv('final.csv')
+@st.cache
+def get_df(filename):
+    df = pd.read_csv(filename)
+    return df
+
+
+df = get_df("final.csv")
 
 left_column, mid_column, right_column = st.columns(3)
 
@@ -89,6 +95,8 @@ power = right_column.slider(
         step = 0.1
     )
 
+
+
 cat_model = pickle.load(open('cat_pipe.pkl', 'rb'))
 
 
@@ -108,6 +116,11 @@ features = pd.DataFrame({
     }, index=[0])
 
 
-prediction = cat_model.predict(features)
+prediction = cat_model.predict(features)[0]
 
-print(prediction)
+pressed = mid_column.button('Predict Car Price')
+
+if pressed:
+  st.subheader(f"This Car is predicted to cost around {prediction:,.0f} INR")
+  st.balloons()
+  
