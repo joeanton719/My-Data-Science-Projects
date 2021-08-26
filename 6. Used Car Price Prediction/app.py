@@ -71,27 +71,33 @@ distance = right_column.slider(
         step = 50
     )
 
+mileage_limit = df.query(f'model == "{model}"')['mileage']
+
 mileage = left_column.slider( 
         "Mileage (km/l)", 
-        min_value = 0.0, 
-        max_value = 50.0, 
-        value = 5.0, 
+        min_value = mileage_limit.min(), 
+        max_value = mileage_limit.max(), 
+        value = mileage_limit.mean(), 
         step = 0.1
     )
 
+engine_limit = df.query(f'model == "{model}"')['engine']
+
 engine = mid_column.slider( 
         "Engine CC", 
-        min_value = 600, 
-        max_value = 5500, 
-        value = 650, 
+        min_value = engine_limit.min(), 
+        max_value = engine_limit.max(), 
+        value = engine_limit.mean(), 
         step = 10
     )
 
+power_limit = df.query(f'model == "{model}"')['power']
+
 power = right_column.slider( 
         "Brake Horse Power (BHP)", 
-        min_value = 30.0, 
-        max_value = 500.0, 
-        value = 50.0, 
+        min_value = power_limit.min(), 
+        max_value = power_limit.max(), 
+        value = power_limit.mean(), 
         step = 0.1
     )
 
