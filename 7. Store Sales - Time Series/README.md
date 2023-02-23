@@ -1,4 +1,4 @@
-# To view Jupyter Notebook, __[Click Here](https://github.com/joeanton719/My-Data-Science-Projects/blob/main/7.%20Store%20Sales%20-%20Time%20Series/Store%20Sales%20EDA_in%20progress.ipynb)__
+# To view Jupyter Notebook, __[Click Here](https://nbviewer.org/github/joeanton719/My-Data-Science-Projects/blob/main/7.%20Store%20Sales%20-%20Time%20Series/Store%20Sales%20EDA_in%20progress.ipynb)__
 
 This Dataset is from a __[Kaggle Competition](https://www.kaggle.com/competitions/store-sales-time-series-forecasting)__
 
